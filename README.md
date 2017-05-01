@@ -85,8 +85,10 @@ This Tutorial will guide you into setting up a Drupal website as digital signage
       
 #4. Raspberry Pi Digital Signage 
 
-How to set up raspberry pi in kiosk mode
+How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link)
 
+              https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/
+              
 *Where the X’s represent the static address you gave your Pi in the previous part. If it’s worked you should be asked                          for your password. Enter the password you chose for your Pi.*
 
 
