@@ -6,8 +6,7 @@ This Tutorial will guide you into setting up a Drupal website as digital signage
       1.Set up a developer environment 
       2.Configure site
       3.Install Drupal modules
-      4.Add Content Types 
-      8.Raspberry Pi Digital Signage
+      4.Raspberry Pi Digital Signage
       5.Trouble shoot 
   
   #1. Set up a developer environment
@@ -54,25 +53,25 @@ This Tutorial will guide you into setting up a Drupal website as digital signage
       6. Download and enable Blazy UI
          $ drush dl blazy
          $ drush en blazy
-    
-#4.  Add Content types(ie.)
+         
+      7. Add Content types(ie.)
           campus
           start cicle
           End cicle
     
-#5.  add views (this will make a page view)
+      8.  add views (this will make a page view)
           1. Disable unneded views
            2. add a view (ie. slides,videos,pages)
    
-#6.  configure module slick 
+      9.  configure module slick 
     
     
-#7.  Setup user roles(ie)
+      10.  Setup user roles(ie)
           Editors
           managers
           user permision 
       
-#8. Raspberry Pi Digital Signage 
+#4. Raspberry Pi Digital Signage 
 
 How to set up raspberry pi in kiosk mode
 
