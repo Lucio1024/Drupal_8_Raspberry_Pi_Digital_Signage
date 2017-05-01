@@ -17,7 +17,8 @@ This Tutorial will guide you into setting up a Drupal website as digital signage
       2.Configure site
       3.Install Drupal modules
       4.Raspberry Pi Digital Signage
-      5.Trouble shoot 
+      5.Raspberry pi Page Configuration
+      6.Trouble shoot 
   
   #1. Set up a developer environment
   
@@ -159,8 +160,28 @@ tells chromium to start and which page to load once it boots without error dialo
 16. Reboot pie
       
       $ ~sudo reboot
+
+#5 Raspberry pi page Configuration
+
+         1. ssh in to raspberry pi
+         
+                  $  ~ssh pi@xxx.xxx.xxx.xxx  
+                  
+         2. nano into autoChromium.desktop
+         
+                 $  sudo nano ~/.config/autostart/autoChromium.desktop
+                 
+         3. Change the website at the end of the line that looks like 
+         
+            $ --disable-infobars --kiosk dev-gore-slide-management.pantheonsite.io/
+            
+            hit ctrl-O to write the file and then ctrl+X to get yourself back to your terminal screen.
+            
+         4. reboot raspberry pi
+                 
+                 $ reboot
       
-#4Trouble Shoot
+#6Trouble Shoot
 
 Kiosk Does not boot into kiosk mode
 
