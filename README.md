@@ -1,6 +1,16 @@
 # Drupal8-Digital-Signage
 This Tutorial will guide you into setting up a Drupal website as digital signage, and will  guide you into setting up the Raspberry pi as an intercepter to pull digital content. The raspberry pi can then be be used in any environment… lobby reception, student lounges, cafeterias, break rooms, call centers, elevator banks, manufacturing floors, meeting rooms…virtually any public space or network To Display Digital Content
 
+      Hardware require
+     
+        rasberry pi 
+        
+     optional hardware
+     
+        smart Wall connector (manage raspberry pi on/off remotely) Bellow is a link 
+        
+        http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2M2Sy68BEiQAtjYS3E_CmNgf-dy-V5NYIGJX-BaMJeWTnSqf581xlxDegn0aAu_I8P8HAQ&gclsrc=aw.ds
+        
   Steps
   
       1.Set up a developer environment 
@@ -77,6 +87,9 @@ This Tutorial will guide you into setting up a Drupal website as digital signage
 
 How to set up raspberry pi in kiosk mode
 
+*Where the X’s represent the static address you gave your Pi in the previous part. If it’s worked you should be asked                          for your password. Enter the password you chose for your Pi.*
+
+
 1. Setting up Rasbian OS If you dont have a Rasbian OS settup on the raspberri pi, click on the link below for a tutorial
 
         https://www.raspbian.org/FrontPage
@@ -118,7 +131,7 @@ How to set up raspberry pi in kiosk mode
 10. test that SSH is working in an other computer
 
           $  ~ssh pi@xxx.xxx.xxx.xxx
-Where the X’s represent the static address you gave your Pi in the previous part. If it’s worked you should be asked                          for your password. Enter the password you chose for your Pi.
+*Where the X’s represent the static address you gave your Pi in the previous part. If it’s worked you should be asked                          for your password. Enter the password you chose for your Pi.*
 
 11. Setting up Kiosk mode disable the screensaver and any energy saving settings (while connected to pi over SSH)
 
