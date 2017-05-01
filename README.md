@@ -59,12 +59,14 @@ This Tutorial will guide you into setting up a Drupal website as digital signage
           start cicle
           End cicle
     
-      8.  add views (this will make a page view)
+      8.  Add views (this will make a page view)
           1. Disable unneded views
            2. add a view (ie. slides,videos,pages)
    
       9.  configure module slick 
-    
+          1.Add a new slick optionset
+          2.name slick optionset 
+          3.configure optionshet to desire settings.
     
       10.  Setup user roles(ie)
           Editors
