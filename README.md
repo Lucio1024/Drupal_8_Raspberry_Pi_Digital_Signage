@@ -1,4 +1,4 @@
-# Drupal-Digital-Signage
+# Drupal8-Digital-Signage
 This Tutorial will guide you into setting up a Drupal website as digital signage, and will  guide you into setting up the Raspberry pi as an intercepter to pull digital content. The raspberry pi can then be be used in any environment… lobby reception, student lounges, cafeterias, break rooms, call centers, elevator banks, manufacturing floors, meeting rooms…virtually any public space or network To Display Digital Content
 
   Steps
