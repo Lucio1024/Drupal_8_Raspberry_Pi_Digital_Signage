@@ -105,6 +105,11 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
         $ ~sudo apt-get install chromium 
         $ ~sudo apt-get install x11-xserver-utils      
         $ ~sudo apt-get install unclutter 
+        
+      *If unclutter fails to install
+      
+       $ ~sudo apt-get update
+        
 4. Setup up SSH on raspberry pi Make sure that the pi is pluged in and connected to the network. *in raspberri pie terminal
 
     $ ~ifconfig
