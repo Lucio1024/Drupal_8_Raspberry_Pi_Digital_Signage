@@ -66,8 +66,7 @@ http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2
       2. Download and enable slick (using drush)
           $  drush dl slick
           $  drush en slick
-      *When prompted click yes to make changes*
-
+          
       3. Download an enable sli ck views
           $ drush dl slick_View
           $ drush en slick_views
@@ -91,8 +90,6 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
 
               https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/
               
-*Where the X’s represent the static address you gave your Pi in the previous part. If it’s worked you should be asked                          for your password. Enter the password you chose for your Pi.*
-
 
 1. Setting up Rasbian OS If you dont have a Rasbian OS settup on the raspberri pi, click on the link below for a tutorial
 
@@ -114,12 +111,13 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
         
 4. Setup up SSH on raspberry pi Make sure that the pi is pluged in and connected to the network. *in raspberri pie terminal
 
-    $ ~ifconfig
+        $ ~ifconfig
 
-             *Write down address, netmask, and gateway.*
+          *Write down address, netmask, and gateway.*
 5. Now in terminal we are going to edit your network settings and setup the static address.
 
              $ ~sudo nano /etc/network/interfaces
+             
 6. This will open up your network interfaces file, start by changing the line that says
 
          iface eth0 inet manual
@@ -131,62 +129,71 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
          netmask 255.255.255.0
          gateway xxx.xxx.xxx.xxx
 
-          hit ctrl-O to write the file and then ctrl+X to get yourself back to your terminal screen.
+         hit ctrl-O to write the file and then ctrl+X to get yourself back to your terminal screen.
+         
 8. Now that you have a static address set you can enable SSH on the pi. We’ll use the wizard that comes with raspbian.
 
          $ ~sudo raspi-config
+         
       *change your user password. The default username is pi and the default password is raspberry.
+      
 9. head to option 5 – Advanced Options and then option P2 – SSH and just hit enabled.
 
 10. test that SSH is working in an other computer
 
           $  ~ssh pi@xxx.xxx.xxx.xxx
+          
 *Where the X’s represent the static address you gave your Pi in the previous part. If it’s worked you should be asked                          for your password. Enter the password you chose for your Pi.*
 
 11. Setting up Kiosk mode disable the screensaver and any energy saving settings (while connected to pi over SSH)
 
-        $ ~sudo nano /etc/xdg/lxsession/LXDE/autostart
+        $ sudo nano .config/lxsession/LXDE-pi/autostart
 
 12. To disable the screensaver add a # to the beginning of the line, this comments the line out.
 
         @xscreensaver -no-splash
+        
 13. Add the following underneath the screensaver line to disables power management settings and stops the screen blanking after a period of inactivity
-
+        
+        @point-rpi
         @xset s off
         @xset -dpms
         @xset s noblank
 14. To prevent any error messages displaying on the screen in the instance that someone accidentally power cycles the pi without going through the shutdown procedure.
 
         @sed -i 's/"exited_cleanly": false/"exited_cleanly": true/' ~/.config/chromium/Default/Preferences
+        
 tells chromium to start and which page to load once it boots without error dialogs and in Kiosk mode. replace page-to.display with whatever page you want to load.
 
-        @chromium --noerrdialogs --kiosk http://www.page-to.display --
+        @chromium-browser  --noerrdialogs --disable-infobars  --kiosk http://www.AddWebsiteHere.com  --incognito
+        
 15. Exit File
 
-    Hit ctrl-O and then ctrl-X again to write out and exit the file
+        Hit ctrl-O and then ctrl-X again to write out and exit the file
+    
 16. Reboot pie
       
-      $ ~sudo reboot
+         $ ~sudo reboot
 
 #5 Raspberry pi page Configuration
 
          1. ssh in to raspberry pi
          
-                  $  ~ssh pi@xxx.xxx.xxx.xxx  
+               $  ~ssh pi@xxx.xxx.xxx.xxx  
                   
          2. nano into autoChromium.desktop
          
-                 $  sudo nano ~/.config/autostart/autoChromium.desktop
+              $  sudo nano ~/.config/autostart/autoChromium.desktop
                  
          3. Change the website at the end of the line that looks like 
          
-            $ --disable-infobars --kiosk dev-gore-slide-management.pantheonsite.io/
+              @chromium-browser  --noerrdialogs --disable-infobars  --kiosk http://www.AddWebsiteHere.com  --incognito
             
-            hit ctrl-O to write the file and then ctrl+X to get yourself back to your terminal screen.
+              *hit ctrl-O to write the file and then ctrl+X to get yourself back to your terminal screen.*
             
          4. reboot raspberry pi
                  
-                 $ reboot
+                 $ sudo reboot
       
 #6Trouble Shoot
 
