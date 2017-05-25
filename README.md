@@ -2,15 +2,15 @@
 
 This Tutorial will guide you into setting up a Drupal 8 website as digital signage, and will aid you into setting up the            Raspberry pi as an intercepter to pull digital content. The raspberry pi can then be be used in any environment such as meeting rooms, student lounges, cafeterias…virtually any public space. 
 
-      Hardware require
+  Required Hardware 
      
-        rasberry pi 
+        rasberry pi (1,2,3,Zero)
         
-     optional hardware
-     
-        smart Wall connector (manage raspberry pi on/off remotely) Bellow is a link 
+  Optional hardware
+  
+        smart Wall connector (to manage the raspberry pi power cicle remote)
         
-        http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2M2Sy68BEiQAtjYS3E_CmNgf-dy-V5NYIGJX-BaMJeWTnSqf581xlxDegn0aAu_I8P8HAQ&gclsrc=aw.ds
+http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2M2Sy68BEiQAtjYS3E_CmNgf-dy-V5NYIGJX-BaMJeWTnSqf581xlxDegn0aAu_I8P8HAQ&gclsrc=aw.ds
         
   Steps
   
