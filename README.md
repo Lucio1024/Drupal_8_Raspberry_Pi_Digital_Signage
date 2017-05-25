@@ -15,11 +15,11 @@ http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2
   Steps
   
       1.Set up a developer environment 
-      2.Configure site
+      2.Confgure Drupal 8 website
       3.Install Drupal modules
-      4.Raspberry Pi Digital Signage
-      5.Raspberry pi Page Configuration
-      6.Trouble shoot 
+      5.Raspberry Pi Digital Signage
+      6.Raspberry pi Page Configuration
+      0.Trouble shoot 
   
   #1. Set up a developer environment
   
@@ -27,10 +27,9 @@ http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2
       
     https://www.drupal.org/docs/develop/local-server-setup/mac-os-development-environment/howto-create-a-local-environment
   
-  #2. Configure Site 
+  #2. Configure Drupal 8 website 
   
-      1. Add Toxonomy Vocabulary 
-  
+      1. Add Toxonomy Vocabulary(ie.) 
           Campus
           public (space)
        
@@ -39,6 +38,25 @@ http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2
           Loby
           Call Center
           Elevetors
+          
+      3. Add Content types(ie.)
+          campus
+          start cicle
+          End cicle
+    
+      4.  Add views (this will make a page view)
+          1. Disable unneded views
+          2. add a view (ie. slides,videos,pages)
+   
+      5.  configure module slick 
+          1.Add a new slick optionset
+          2.name slick optionset 
+          3.configure optionshet to desire settings.
+    
+      6.  Setup user roles(ie)
+          Editors
+          managers
+          user permision 
  
 #3. Install Drupal Modules
 
@@ -66,26 +84,8 @@ http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2
          $ drush dl blazy
          $ drush en blazy
          
-      7. Add Content types(ie.)
-          campus
-          start cicle
-          End cicle
-    
-      8.  Add views (this will make a page view)
-          1. Disable unneded views
-           2. add a view (ie. slides,videos,pages)
-   
-      9.  configure module slick 
-          1.Add a new slick optionset
-          2.name slick optionset 
-          3.configure optionshet to desire settings.
-    
-      10.  Setup user roles(ie)
-          Editors
-          managers
-          user permision 
       
-#4. Raspberry Pi Digital Signage 
+ #4. Raspberry Pi Digital Signage 
 
 How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link)
 
