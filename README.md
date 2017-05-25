@@ -1,4 +1,4 @@
-                                             Drupal 8 Raspberry Pi Digital Signage
+                                         Drupal 8 Raspberry Pi Digital Signage
 
 This Tutorial will guide you into setting up a Drupal 8 website as digital signage, and will aid you into setting up the            Raspberry pi as an intercepter to pull digital content. The raspberry pi can then be be used in any environment such as meeting rooms, student lounges, cafeterias…virtually any public space. 
 
@@ -50,7 +50,7 @@ http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2
           $  drush en slick
       *When prompted click yes to make changes*
 
-      3. Download an enable slick views
+      3. Download an enable sli ck views
           $ drush dl slick_View
           $ drush en slick_views
     
@@ -98,9 +98,10 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
 
         https://www.raspbian.org/FrontPage
 
-2. Update rasbian package list
+2. Update raspbian package list
 
- $ ~sudo apt-get update && sudo apt-get upgrade -y
+        $ ~sudo apt-get update && sudo apt-get upgrade -y
+ 
 3. Install the chromium browser, x11 server utilities and unclutter(removes the cursor from the screen)
 
         $ ~sudo apt-get install chromium 
