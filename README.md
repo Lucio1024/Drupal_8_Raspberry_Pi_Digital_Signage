@@ -17,8 +17,8 @@ http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2
       1.Set up a developer environment 
       2.Confgure Drupal 8 website
       3.Install Drupal modules
-      5.Raspberry Pi Digital Signage
-      6.Raspberry pi Page Configuration
+      4.Raspberry Pi Digital Signage
+      5.Raspberry pi Page Configuration
       0.Trouble shoot 
   
   #1. Set up a developer environment
@@ -195,25 +195,25 @@ tells chromium to start and which page to load once it boots without error dialo
                  
                  $ sudo reboot
       
-#6Trouble Shoot
+#0 Trouble Shoot
 
-Kiosk Does not boot into kiosk mode
+1. Kiosk Does not boot into kiosk mode
 
-1. Create a new .desktop file in ~/.config/autostart/, e.g.
+      1. Create a new .desktop file in ~/.config/autostart/, e.g.
 
-      sudo nano ~/.config/autostart/autoChromium.desktop
+             $ sudo nano ~/.config/autostart/autoChromium.desktop
       
-2. add the following: and change testSite.com
+      2. add the following: and change testSite.com
 
-      [Desktop Entry]
-      Type=Application
-      Exec=/usr/bin/chromium-browser --noerrdialogs --disable-session-crashed-bubble --disable-infobars --kiosk www.testSite.com
-      Hidden=false
-      X-GNOME-Autostart-enabled=true
-      Name[en_US]=AutoChromium
-      Name=AutoChromium
-      Comment=Start Chromium when GNOME starts
+          [Desktop Entry]
+          Type=Application
+          Exec=/usr/bin/chromium-browser --noerrdialogs --disable-session-crashed-bubble --disable-infobars --kiosk                     www.testSite.com
+          Hidden=false
+          X-GNOME-Autostart-enabled=true
+          Name[en_US]=AutoChromium
+          Name=AutoChromium
+          Comment=Start Chromium when GNOME starts
       
-3.reboot pi
+      3.reboot pi
 
-    $ ~sudo reboot
+            $ ~sudo reboot
