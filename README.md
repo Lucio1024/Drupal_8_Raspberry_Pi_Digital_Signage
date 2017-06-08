@@ -101,7 +101,7 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
  
 3. Install the chromium browser, x11 server utilities and unclutter(removes the cursor from the screen)
 
-        $ ~sudo apt-get install chromium 
+        $ ~sudo apt-get install chromium-browser 
         $ ~sudo apt-get install x11-xserver-utils      
         $ ~sudo apt-get install unclutter 
         
