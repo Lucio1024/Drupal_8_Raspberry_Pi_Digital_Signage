@@ -1,6 +1,6 @@
                                          Drupal 8 Raspberry Pi Digital Signage
 
-This Tutorial will guide you into setting up a Drupal 8 website as digital signage, and will aid you into setting up the            Raspberry pi as an intercepter to pull digital content. The raspberry pi can then be be used in any environment such as meeting rooms, student lounges, cafeterias…virtually any public space. 
+This Tutorial will guide you into setting up a Drupal 8 website as digital signage, and will aid you into setting up the Raspberry pi as an intercepter to pull digital content. The raspberry pi can then be used in any environment such as meeting rooms, student lounges, cafeterias…virtually any public space. 
 
   Required Hardware 
      
@@ -8,7 +8,7 @@ This Tutorial will guide you into setting up a Drupal 8 website as digital signa
         
   Optional hardware
   
-        smart Wall connector (to manage the raspberry pi power cicle remote)
+        smart Wall connector (to manage the raspberry pi power cicle remotely)
         
 http://www.belkin.com/us/P-F7C029-belkin/p/P-F7C029/?gclid=Cj0KEQjwuZvIBRD-8Z6B2M2Sy68BEiQAtjYS3E_CmNgf-dy-V5NYIGJX-BaMJeWTnSqf581xlxDegn0aAu_I8P8HAQ&gclsrc=aw.ds
         
@@ -109,25 +109,31 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
       
        $ ~sudo apt-get update
         
-4. Setup up SSH on raspberry pi Make sure that the pi is pluged in and connected to the network. *in raspberri pie terminal
+4. Setup up SSH on raspberry pi Make sure that the pi is pluged in and connected to the network. *in raspberri pi terminal
 
         $ ~ifconfig
 
-          *Write down address, netmask, and gateway.*
-5. Now in terminal we are going to edit your network settings and setup the static address.
+          *Write down the IP address, netmask, and gateway.*
+          
+5. Run the below command to chech wether DHCPCD is already running 
+        
+          $ ~ sudo service dhcpcd status
+          
+          Incase it is not, activate DHCPCD as follows:
+          
+          $ ~ sudo service dhcpcd start
+          $ ~ sudo systemctl enable dhcpcd
 
-             $ ~sudo nano /etc/network/interfaces
+6. Edit your network settings and setup the static address.
+
+             $ ~ sudo nano /etc/dhcpcd.conf
              
-6. This will open up your network interfaces file, start by changing the line that says
+7. Configure the static IP address. If your Raspberry Pi is connected to the internet via an Ethernet or network cable, then enter the command ‘interface eth0’; if it takes place over Wi-Fi, then use the ‘interface wlan’ command
 
-         iface eth0 inet manual
-         to
-         iface eth0 inet static
-7. Now you’ll need to add 3 lines straight after, if they aren’t already there.
-
-         address xxx.xxx.xxx.xxx
-         netmask 255.255.255.0
-         gateway xxx.xxx.xxx.xxx
+         iface wlan0 
+         static IP_address =  192.xxx.xxx.1/24
+         static routers= 192..xxx.xxx.1
+         static domain_name_servers= 192..xxx.xxx.1
 
          hit ctrl-O to write the file and then ctrl+X to get yourself back to your terminal screen.
          
