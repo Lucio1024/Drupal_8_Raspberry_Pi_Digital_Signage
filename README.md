@@ -147,7 +147,7 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
 
 11. Setting up Kiosk mode disable the screensaver and any energy saving settings (while connected to pi over SSH)
 
-        $ sudo nano .config/lxsession/LXDE-pi/autostart
+        $ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 
 12. To disable the screensaver add a # to the beginning of the line, this comments the line out.
 
