@@ -130,7 +130,7 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
              
 7. Configure the static IP address. If your Raspberry Pi is connected to the internet via an Ethernet or network cable, then enter the command ‘interface eth0’; if it takes place over Wi-Fi, then use the ‘interface wlan’ command
 
-         iface wlan0 
+         interface wlan0 
          static IP_address =  192.xxx.xxx.1/24
          static routers= 192..xxx.xxx.1
          static domain_name_servers= 192..xxx.xxx.1
