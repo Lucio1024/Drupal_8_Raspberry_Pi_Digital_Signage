@@ -171,7 +171,7 @@ How to set up raspberry pi in kiosk mode(follow tutorial bellow or click on link
         
 tells chromium to start and which page to load once it boots without error dialogs and in Kiosk mode. replace page-to.display with whatever page you want to load.
 
-        @chromium-browser  --noerrdialogs --disable-infobars  --kiosk http://www.AddWebsiteHere.com  --incognito
+        @chromium-browser --start-fullscreen --noerrdialogs --disable-infobars  --kiosk http://www.AddWebsiteHere.com  --incognito
         
 15. Exit File
 
